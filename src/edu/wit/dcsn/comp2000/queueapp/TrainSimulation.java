@@ -28,15 +28,19 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * @author Your Name
- * @version 1.0.0
+ * @author AJ Salaris, Andrew Galvin
+ * @version 1.3 updated, unfinished
  */
 public class TrainSimulation {
     public static StringBuilder toPrint;
     public static PrintWriter file_out;
+    private static TrainRoute ArrayList;
+    private static Object TrainRoute;
+
     /**
      * @param args -unused-
      */
@@ -168,6 +172,26 @@ public class TrainSimulation {
             );
 
         }
+
+        public static Passenger createAPassenger(ArrayList(ArrayList<TrainRoute> trainRoutes, Random pseudoRandom){
+            //Configuration theConfig = new Configuration();
+            //TrainRoute theRoute = new TrainRoute(theConfig.getRoute());
+            //int[] theStationSpecs = theConfig.getStations();
+            //Configuration.PairedLimit[] thePassengerSpecs = theConfig.getPassengers();
+
+            // create a pseudo-random number generator instance
+            pseudoRandom = new Random(theConfig.getSeed());
+
+            int fromStationId = pseudoRandom.nextInt(theStationSpecs.length) +1;
+            int toStationId = pseudoRandom.nextInt(theStationSpecs.length)+1;
+            if(fromStationId == toStationId)
+                toStationId = pseudoRandom.nextInt(theStationSpecs.length)+1;
+            Location from = new Location(route, fromStationId, Direction.NOT_APPLICABLE);
+            Location to = new Location(route, toStationId, Direction.NOT_APPLICABLE);
+            Passenger aPassenger = new Passenger(from, to, 0);
+
+            return aPassenger;
+        }
 //        Location toLocation = ;
 //
 //        for (int passengerCount = 1; passengerCount <= newPassengerCount; passengerCount++) {
@@ -184,6 +208,10 @@ public class TrainSimulation {
 //        }
     }
     public static void run(){
+
+    }
+
+    public static void reportStatistics(){
 
     }
 }

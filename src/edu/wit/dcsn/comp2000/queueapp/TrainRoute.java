@@ -47,7 +47,10 @@ import edu.wit.dcsn.comp2000.queueapp.Configuration.RouteSpec;
  * authorship comments. If you modify this, add your authorship to mine.
  *
  * @author David M Rosenberg
- * @version 1.0.0    base version
+ * @author Prarthna B
+ * @version 1.2    added getStation methods
+ *
+ *
  */
 public final class TrainRoute {
     // class-wide/shared information
@@ -227,6 +230,41 @@ public final class TrainRoute {
         //			find a location to transfer
 
         return calculatedDirection;
+    }
+
+    public Station getStation(int targetId){
+        for(Station aStation : this.stations){
+            if(aStation.equals(this.stations.get(targetId-1)))
+                return aStation;
+        }
+        //Station aStation = this.stations.get(targetId-1);
+        return null;
+    }
+    public Station getStation(Location atLocation){
+        for(Station aStation : this.stations){
+            if(atLocation.equals(aStation.getLocation())){
+                return aStation;
+            }
+        }
+
+        return null;
+    }
+    public Train getTrain(int targetId){
+        for(Train aTrain : this.trains){
+            if(aTrain.equals(this.trains.get(targetId-1)))
+                return aTrain;
+        }
+        //Station aStation = this.stations.get(targetId-1);
+        return null;
+    }
+
+    public Train getTrain(Location atLocation){
+        for(Train aTrain : this.trains) {
+            if (atLocation.equals(aTrain.getLocation()))
+                return aTrain;
+        }
+
+        return null;
     }
 
 }    // end class TrainRoute

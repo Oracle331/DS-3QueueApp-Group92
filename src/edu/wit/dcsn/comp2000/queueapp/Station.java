@@ -37,8 +37,8 @@ import java.util.Queue;
  * NOTE: This class is incomplete - you may want to restructure it based on your
  * implementation's requirements.
  *
- * @author David M Rosenberg
- * @version 1.0.0    base version
+ * @author Andrew Galvin
+ * @version 1.2.1 unfinished
  */
 public final class Station {
     // class-wide/shared information

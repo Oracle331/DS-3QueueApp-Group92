@@ -46,6 +46,9 @@ import edu.wit.dcsn.comp2000.queueapp.Configuration.TrainSpec;
  *
  * @author David M Rosenberg
  * @version 1.0.0    base version
+ *
+ * @author Andrew Galvin
+ * @version 1.2.0   update unfinished
  */
 public final class Train {
     // class-wide/shared information
