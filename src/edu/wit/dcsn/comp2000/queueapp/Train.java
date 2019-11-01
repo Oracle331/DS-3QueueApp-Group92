@@ -144,8 +144,15 @@ public final class Train {
         passengers.add(p);
     }
 
-    public void removePassenger(Passenger p) {
-        passengers.remove(p);
+//    public void removePassenger(Passenger p) {
+//        if(p.getTo().equals(getLocation()))
+//            passengers.remove(p);
+//    }
+    public void removePassenger(){
+        for(Passenger p : passengers){
+            if(p.getTo().equals(getLocation()))
+                passengers.remove(p);
+        }
     }
 
     public boolean isEmpty() {
